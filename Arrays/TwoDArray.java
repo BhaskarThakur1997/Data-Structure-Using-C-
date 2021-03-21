@@ -1,0 +1,38 @@
+import java.util.*;
+public class TwoDArray{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int m = scan.nextInt();
+        int arr[][] = new int[n][m];
+        System.out.println("Enter Elements in arr[][]:");
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                arr[i][j] = scan.nextInt();
+            }
+        }
+        System.out.println("elements in array:");
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println("searching elements in matrix");
+        int x = scan.nextInt();
+        boolean flag = false;
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                if(arr[i][j]==x){
+                    System.out.println(i+" "+j);
+                    flag = true;
+                }
+            }
+        } 
+        if(flag){
+            System.out.println("elements is found");
+        }else{
+            System.out.println("elements is not found");
+        }
+    }
+}
